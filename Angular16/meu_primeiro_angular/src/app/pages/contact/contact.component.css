@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+input {
+  margin: 15px;
+  padding: 10px;
+  border: none;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+textarea {
+  margin: 15px;
+  padding: 10px;
+  border: none;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 5px;
+  width: 20%;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #006600;
+}
