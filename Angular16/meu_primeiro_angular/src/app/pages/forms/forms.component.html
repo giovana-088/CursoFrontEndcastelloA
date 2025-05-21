@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Formulário de Cadastro</h2>
+  <form action="">
+      <label for="">Nome:</label>
+      <input type="text" name="nome" [(ngModel)]="nome" >
+      <br>
+      <label for="">Email:</label>
+      <input type="text" name="email" [(ngModel)]="email" >
+      <br>
+      <label for="">Telefone:</label>
+      <input type="text" name="telefone" [(ngModel)]="telefone" >
+      <br>
+      <label for="">Idade:</label>
+      <input type="number" min="0" name="idade" [(ngModel)]="idade" >
+      <br>
+      <label for="">Profissão:</label>
+      <input type="text" name="profissao" [(ngModel)]="profissao" >
+      <br>
+      <div class="botoes">
+        <button (click)="limparDados()">Limpar</button>
+        <button (click)="enviarDados()">Enviar</button>
+      </div>
+  </form>
+
+  <hr>
+
+  <h3>Visualização em Tempo Real</h3>
+  <div class="preview">
+      <p><strong>Nome:</strong>{{nome}}</p>
+      <p><strong>Email:</strong>{{email}}</p>
+      <p><strong>Telefone:</strong>{{telefone}}</p>
+      <p><strong>Idade:</strong>{{idade}}</p>
+      <p><strong>Profissão:</strong>{{profissao}}</p>
+  </div>
+</div>

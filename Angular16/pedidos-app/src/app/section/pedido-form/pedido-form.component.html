@@ -1,0 +1,20 @@
+<h2>Registrar Pedido</h2>
+
+<label for="">Cliente:</label>
+<select name="clienteSelecionadoId" id="" [(ngModel)]="clienteSelecionadoId">
+  <option value="">Selecione um Cliente</option>
+  <option *ngFor="let cliente of clientes" [value]=""cliente.id>{{cliente.nome}}</option>
+</select>
+
+<h3>Produtos</h3>
+<div *ngFor="let produto of produtos">
+  <label for="">
+    <input type="checkbox" [value]="produto.id" (change)="mudarProduto(produto.id.toString())">
+    {{produto.nome}} - R$ {{produto.preco}}
+  </label>
+</div>
+
+<label for="">Desconto</label>
+<input type="number" name="desconto" [(ngModel)]="desconto">
+
+<button (click)="salvarPedido()">Registrar Pedido</button>
