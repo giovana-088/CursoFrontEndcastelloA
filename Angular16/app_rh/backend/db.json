@@ -22,18 +22,25 @@
       "salario": 10000
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Engenheiro de Cloud",
       "foto": "foto1.jpg",
       "descricao": "Arquitetura de nuvens e serviços online",
       "salario": 8000
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Engenheiro de Cloud",
       "foto": "foto1.jpg",
       "descricao": "Arquitetura de nuvens e serviços online",
       "salario": 8000
+    },
+    {
+      "id": 0,
+      "nome": "",
+      "foto": "",
+      "descricao": "",
+      "salario": 0
     }
   ],
   "curriculos": []

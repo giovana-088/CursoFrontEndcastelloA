@@ -1,1 +1,53 @@
-<p>painel-vagas works!</p>
+<h2>Cadastrar</h2>
+
+<!-- formulário para mostrar a vaga selecionada ou cadastrar uma vaga nova  -->
+
+<form action="">
+  <label for="">ID</label>
+  <input type="text" [(ngModel)]="vaga.id">
+  <br>
+  <label for="">Nome</label>
+  <input type="text" [(ngModel)]="vaga.nome">
+  <br>
+  <label for="">Foto</label>
+  <input type="text" [(ngModel)]="vaga.foto">
+  <br>
+  <label for="">Descrição</label>
+  <input type="text" [(ngModel)]="vaga.descricao">
+  <br>
+  <label for="">Salário</label>
+  <input type="text" [(ngModel)]="vaga.salario">
+  <br>
+
+  <button type="button" (click)="cadastrarVaga()">Cadastrar Vaga</button>
+  <button type="button" (click)="atualizarVaga(vaga.id)">Atualizar Vaga</button>
+  <button type="button" (click)="excluirVaga(vaga.id)">Excluir Vaga</button>
+</form>
+
+<!-- tabela com as vagas já cadastradas BD -->
+ <section class="listar-vagas">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Código da Vaga</th>
+        <th>Vaga</th>
+        <th>Descrição</th>
+        <th>salário</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vaga of vagas">
+        <td>{{vaga.id}}</td>
+        <td>{{vaga.nome}}</td>
+        <td>{{vaga.descricao}}</td>
+        <td>R$ {{vaga.salario}},00</td>
+        <td>
+          <button type="button" (click)="listarVagaUnica(vaga)">Listar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ </section>
+
+ <div class="rodape"></div>
