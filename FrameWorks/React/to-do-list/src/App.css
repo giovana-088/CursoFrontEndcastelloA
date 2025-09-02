@@ -1,0 +1,15 @@
+body{
+  text-align: center;
+  font-family: Comic Sans MS;
+  background-color: aliceblue;
+}
+button{
+  margin-left: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  background-color: aqua;
+  color: #eee;
+  cursor: pointer;
+  font-size: 16px;
+}

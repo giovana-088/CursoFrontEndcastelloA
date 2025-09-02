@@ -1,0 +1,15 @@
+/* estilização para lista de tarefas */
+
+ul{
+    list-style: none;
+    max-width: 400px;
+    margin: auto;
+}
+li{
+    background-color: #ccc;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
