@@ -1,0 +1,135 @@
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111111;
+    --foreground: #ffffff;
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Geist Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px var(--gray-alpha-200);
+  background: var(--background);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+form input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background: var(--gray-alpha-100);
+  transition: border 0.2s, background 0.2s;
+}
+
+form input:focus {
+  border-color: var(--foreground);
+  background: var(--gray-alpha-200);
+}
+
+form button {
+  padding: 0 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--foreground);
+  color: var(--background);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: var(--button-primary-hover);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  background: var(--gray-alpha-100);
+  transition: background 0.2s;
+}
+
+li:hover {
+  background: var(--gray-alpha-200);
+}
+
+li span {
+  flex: 1;
+  margin-left: 0.5rem;
+}
+
+li span.concluida {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+li button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+li button:hover {
+  background: darkred;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  form button, li button {
+    padding: 4px 8px;
+  }
+}
