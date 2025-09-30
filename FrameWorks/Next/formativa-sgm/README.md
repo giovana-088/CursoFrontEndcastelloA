@@ -103,6 +103,50 @@ classDiagram
     Equipamento "1" -- "0..*" OrdemServico : associado a >
 
 ```
+2. ### Caso de Uso
+Ilustra as interações dos diferentes tipos de usuários(Atores) com as funcionalidades do sistema
+- Técnico: Gerenciar Ordem de Serviço (CRUD) e acessar o DashBoard
+- Gerente: funções do técnico + Gerenciamento de Equipamentos (CRUD)
+- Admin: Gerenciar Usuários, Acessar o Dashboard
+
+Todos Devem Fazer o login antes de qualquer ação
+
+```mermaid
+
+graph TD 
+
+    subgraph "SGM"
+        caso1([Fazer Login])
+        caso2([Gerenciar Ordens de Serviço - CRUD])
+        caso3([Gerenciar Equipamentos - CRUD])
+        caso4([Gerenciar Usuários])
+        caso5([Acessar o Dasboard])
+    end
+
+    Tecnico([Técnico de Manutenção])
+    Gerente([Gerente de Manutenção])
+    Admin([Administrador do Sistema])
+
+    Tecnico --> caso1
+    Tecnico --> caso2
+    Tecnico --> caso5
+
+    Gerente --> caso1
+    Gerente --> caso2
+    Gerente --> caso3
+    Gerente --> caso5
+
+    Admin --> caso1
+    Admin --> caso4
+    Admin --> caso5
 
 
+    caso1 -.-> caso2
+    caso1 -.-> caso3
+    caso1 -.-> caso4
+    caso1 -.-> caso5
 
+
+    
+
+```
